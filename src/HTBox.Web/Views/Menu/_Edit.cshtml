@@ -1,0 +1,50 @@
+﻿@model HTBox.Web.Models.MenuTree
+
+@using (Html.BeginForm(new { parentId = Request.QueryString["parentId"] }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    @Html.HiddenFor(model => model.MenuId)
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.MenuName)
+                @Html.TextBoxFor(m => m.MenuName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.PageUrl)
+                @Html.TextBoxFor(m => m.PageUrl)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ParentId)
+                @if (!string.IsNullOrEmpty(Request.QueryString["parentId"]))
+                {
+                      @Html.TextBoxFor(m => Request.QueryString["parentId"], new { @readonly = "readonly" })
+                }
+                else
+                {
+                    @Html.TextBoxFor(m => m.ParentId, new { @readonly = "readonly" })
+                }
+            </li>
+
+            <li>
+                @Html.LabelFor(m => m.OrderIndex)
+                @Html.TextBoxFor(m => m.OrderIndex)
+            </li>
+
+            <li>
+                @Html.LabelFor(m => m.IsHidden)
+                @Html.CheckBoxFor(m => m.IsHidden)
+            </li>
+
+              <li>
+                @Html.LabelFor(m => m.IsPublic)
+                @Html.CheckBoxFor(m => m.IsPublic)
+            </li>
+        </ol>
+        <input type="submit" value="Save" />
+        <input type="button" onclick="window.location.href='@Url.Action("Index", "Menu", new { parentId = Request.QueryString["parentId"] })'; return false;" value="Cancel" class="cancel" />
+    </fieldset>
+}
+

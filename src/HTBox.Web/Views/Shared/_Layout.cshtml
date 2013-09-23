@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - @HTBox.Web.SiteSetting.SiteName</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui") 
+    @Scripts.Render("~/bundles/menu")
+    
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        @Html.GetMenuScript(User.Identity.Name);
+    </script>
+</head>
+<body>
+    <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink(@HTBox.Web.SiteSetting.SiteName, "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                   <div style="height: 27px; width: 100%; text-align: left;" class="menu-state-container">                    <div id="menu" style="display: inline;">
+                    @Html.GetMenuHtml(User.Identity.Name);
+                    </div>
+            </div>
+        </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+    </div>
+    <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
