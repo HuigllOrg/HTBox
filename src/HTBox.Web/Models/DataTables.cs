@@ -260,12 +260,11 @@ namespace HTBox.Web.Models
     {
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-
+        
         public int VUserId { get; set; }
         [ForeignKey("RoleID")]
         public Webpages_Roles Role { get; set; }
 
-        
         public string RoleID { get; set; }
 
 
@@ -273,26 +272,31 @@ namespace HTBox.Web.Models
         public Webpages_UserProfile User { get; set; }
 
         
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
 
         [Required]
         public int Type { get; set; }
 
 
 
-        public static Webpages_VUser Find(int vuserid)
+        public static Webpages_VUser Find(int vuserid,WebPagesContext db=null)
         {
-            using (var db = new WebPagesContext())
+            
+            if (db == null)
             {
-                return db.Webpages_VUsers.FirstOrDefault(o => o.VUserId == vuserid);
+                using (var db1 = new WebPagesContext())
+                {
+                    return db1.Webpages_VUsers.Include(o => o.User).Include(o => o.Role).FirstOrDefault(o => o.VUserId == vuserid);
+                }
             }
+            return db.Webpages_VUsers.Include(o => o.User).Include(o => o.Role).FirstOrDefault(o => o.VUserId == vuserid);
         }
 
         public static Webpages_VUser CreateOrGetByUserId(int userid)
         {
             using (var db = new WebPagesContext())
             {
-                var vuser = db.Webpages_VUsers.FirstOrDefault(o => o.UserID == userid);
+                var vuser = db.Webpages_VUsers.Include(o=>o.User).Include(o=>o.Role).FirstOrDefault(o => o.UserID == userid);
                 if (vuser != null)
                     return vuser;
                 if (db.UserProfiles.Find(userid) == null)
@@ -309,7 +313,7 @@ namespace HTBox.Web.Models
         {
             using (var db = new WebPagesContext())
             {
-                var vuser = db.Webpages_VUsers.FirstOrDefault(o => o.RoleID == groupCode);
+                var vuser = db.Webpages_VUsers.Include(o=>o.Role).Include(o=>o.User).FirstOrDefault(o => o.RoleID == groupCode);
                 if (vuser != null)
                     return vuser;
                 vuser = new Webpages_VUser();
@@ -317,6 +321,7 @@ namespace HTBox.Web.Models
                 vuser.Type = (int)VUserType.Group;
                 db.Webpages_VUsers.Add(vuser);
                 db.SaveChanges();
+                vuser = db.Webpages_VUsers.Include(o => o.Role).Include(o => o.User).FirstOrDefault(o => o.RoleID == groupCode);
                 return vuser;
             }
         }

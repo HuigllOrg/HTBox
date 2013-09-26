@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Data.Linq;
 using System.Linq;
 using System.Web.Security;
+using System.Data.Entity;
 using HTBox.Web.Utility;
 
 namespace HTBox.Web.Models
@@ -420,7 +421,7 @@ namespace HTBox.Web.Models
                 {
                     foreach (int vuserid in vuserIds)
                     {
-                        Webpages_VUser vu = db.Webpages_VUsers.FirstOrDefault(o => o.VUserId == vuserid);
+                        Webpages_VUser vu = Webpages_VUser.Find(vuserid,db);
                         
                         if (vu.Type == (int)VUserType.Group)
                         {
@@ -436,8 +437,9 @@ namespace HTBox.Web.Models
                 {
                     foreach (int vuserid in vuserIds)
                     {
-                        Webpages_VUser vu = db.Webpages_VUsers.FirstOrDefault(o=>o.VUserId ==vuserid);
-                        
+
+                        Webpages_VUser vu = Webpages_VUser.Find(vuserid,db);
+                        db.ChangeTracker.DetectChanges();
                         if (vu.Type == (int)VUserType.Group)
                         {
                             var user = vuser.User;
@@ -777,7 +779,7 @@ namespace HTBox.Web.Models
 
                             foreach (int id in groups)
                             {
-                                Webpages_VUser tmpv = db.Webpages_VUsers.FirstOrDefault(o=>o.VUserId == id);
+                                Webpages_VUser tmpv = Webpages_VUser.Find(id,db);
                                 
 
                                 if (tmpv.Type == (int)VUserType.Group)

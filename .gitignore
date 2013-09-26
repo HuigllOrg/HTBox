@@ -1,7 +1,7 @@
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
 [Oo]bj/
-
+mysql-connector-net-6.7.4-src
 # mstest test results
 TestResults
 

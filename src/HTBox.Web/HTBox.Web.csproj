@@ -111,6 +111,8 @@
     <Reference Include="System.Runtime">
       <HintPath>..\packages\Microsoft.Bcl.1.1.3\lib\net40\System.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.1.1.3\lib\net40\System.Threading.Tasks.dll</HintPath>
     </Reference>
@@ -403,7 +405,9 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-2.0.3.min.map" />
@@ -425,11 +429,11 @@
     <Content Include="Views\UserRole\DeleteRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\mysql-connector-net-6.7.4-src\Source\MySql.Data.Entity\MySql.Data.Entity.csproj">
+    <ProjectReference Include="..\..\mysql-connector-net-6.7.4-src\Source\MySql.Data.Entity\MySql.Data.Entity.csproj">
       <Project>{EDED3135-95D2-4BCE-A810-F3F2AD7935B7}</Project>
       <Name>MySql.Data.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\mysql-connector-net-6.7.4-src\Source\MySql.Data\MySql.Data.csproj">
+    <ProjectReference Include="..\..\mysql-connector-net-6.7.4-src\Source\MySql.Data\MySql.Data.csproj">
       <Project>{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}</Project>
       <Name>MySql.Data</Name>
     </ProjectReference>

@@ -6,7 +6,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Data.Entity;
 
 namespace HTBox.Web.Models
 {
@@ -252,14 +252,14 @@ namespace HTBox.Web.Models
         {
             using (var db = new WebPagesContext())
             {
-                Webpages_VUser bigGroup = db.Webpages_VUsers.Find(BigCode);
+                Webpages_VUser bigGroup = Webpages_VUser.Find(BigCode,db);
                 if (bigGroup == null)
                     throw new DataException("VuserId:" + BigCode);
 
                 if (bigGroup.Type ==(int) VUserType.User)
                     return new int[0];
 
-                var smGroup = db.Webpages_VUsers.Find(smallCode);
+                var smGroup = Webpages_VUser.Find(smallCode,db);
                 if (smGroup == null)
                     throw new DataException("VuserId:" + smallCode);
 
@@ -602,8 +602,8 @@ namespace HTBox.Web.Models
                 return GpCodeRelation.Equality;
             using (var db = new WebPagesContext())
             {
-                var a = db.Webpages_VUsers.Find(CodeA);
-                var b = db.Webpages_VUsers.Find(CodeB);
+                var a = Webpages_VUser.Find(CodeA,db);
+                var b = Webpages_VUser.Find(CodeB,db);
                 if (a== null)
                     return GpCodeRelation.Error;
                 if (b == null)
