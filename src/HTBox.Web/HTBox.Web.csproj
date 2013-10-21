@@ -429,14 +429,6 @@
     <Content Include="Views\UserRole\DeleteRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\mysql-connector-net-6.7.4-src\Source\MySql.Data.Entity\MySql.Data.Entity.csproj">
-      <Project>{EDED3135-95D2-4BCE-A810-F3F2AD7935B7}</Project>
-      <Name>MySql.Data.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\mysql-connector-net-6.7.4-src\Source\MySql.Data\MySql.Data.csproj">
-      <Project>{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}</Project>
-      <Name>MySql.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\QQAuthentication\QQAuthentication.csproj">
       <Project>{12A761D4-F251-4CFD-AD86-C8F28E76F666}</Project>
       <Name>QQAuthentication</Name>
