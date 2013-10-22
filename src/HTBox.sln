@@ -7,11 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTBox.Web.Tests", "HTBox.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QQAuthentication", "QQAuthentication\QQAuthentication.csproj", "{12A761D4-F251-4CFD-AD86-C8F28E76F666}"
 EndProject
-<<<<<<< HEAD
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D1603F01-D890-4C1E-AED0-9EFF81C7C40F}"
-=======
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{59C2FC31-AA42-4D15-BA50-4C372FD42B29}"
->>>>>>> 63b448765766df42fb319092d81b04d137cc5e8d
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
