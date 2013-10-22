@@ -568,7 +568,7 @@ namespace HTBox.Web.Models
                             foreach (int vuserid in item.RemovedVUserids)
                             {
                                 var menu = db.MenuTrees.Find(menuid, vuserid);
-                                db.Entry(menu).State = System.Data.EntityState.Deleted;
+                                db.Entry(menu).State = System.Data.Entity.EntityState.Deleted;
                             }
                             
                         }

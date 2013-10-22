@@ -82,7 +82,7 @@ namespace HTBox.Web.Controllers
             if (ModelState.IsValid)
             {
 
-                db.Entry(menu).State = System.Data.EntityState.Modified;
+                db.Entry(menu).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 MenuNavigation.ClearMenuTreeCache();
                 string parentid = Request.QueryString["parentid"];
@@ -99,7 +99,7 @@ namespace HTBox.Web.Controllers
         {
 
             var menu = db.MenuTrees.Find(id);
-            db.Entry(menu).State = System.Data.EntityState.Deleted;
+            db.Entry(menu).State = System.Data.Entity.EntityState.Deleted;
             db.SaveChanges();
             MenuNavigation.ClearMenuTreeCache();
             return Content(Boolean.TrueString);
