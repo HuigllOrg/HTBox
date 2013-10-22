@@ -28,7 +28,8 @@
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
-                   <div style="height: 27px; width: 100%; text-align: left;" class="menu-state-container">                    <div id="menu" style="display: inline;">
+                   <div style="height: 27px; width: 100%; text-align: left;" class="menu-state-container">
+                    <div id="menu" style="display: inline;">
                     @Html.GetMenuHtml(User.Identity.Name);
                     </div>
             </div>

@@ -110,7 +110,7 @@ namespace HTBox.Web.Controllers
                 {
                     return Content("User Exist");
                 }
-                db.Entry(user).State = System.Data.EntityState.Modified;
+                db.Entry(user).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
             }
             return Content(Boolean.TrueString);
@@ -211,7 +211,7 @@ namespace HTBox.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(role).State = System.Data.EntityState.Modified;
+                db.Entry(role).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
             }
             return Content(Boolean.TrueString);
@@ -222,19 +222,19 @@ namespace HTBox.Web.Controllers
             using (TransactionScope ts = new TransactionScope())
             {
                 var menu = db.UserProfiles.Find(userid);
-                db.Entry(menu).State = System.Data.EntityState.Deleted;
+                db.Entry(menu).State = System.Data.Entity.EntityState.Deleted;
                 foreach (var vuser in db.Webpages_VUsers.Where(o => o.UserID == userid).ToList())
                 {
                     foreach (var tree in db.MenuTreeRights.Where(o => o.VuserID == vuser.VUserId).ToList())
                     {
-                        db.Entry(tree).State = System.Data.EntityState.Deleted;
+                        db.Entry(tree).State = System.Data.Entity.EntityState.Deleted;
                     }
-                    db.Entry(vuser).State = System.Data.EntityState.Deleted;
+                    db.Entry(vuser).State = System.Data.Entity.EntityState.Deleted;
 
                 }
                 foreach (var vuser in db.WebPagesUsersInRoles.Where(o => o.UserId == userid).ToList())
                 {
-                    db.Entry(vuser).State = System.Data.EntityState.Deleted;
+                    db.Entry(vuser).State = System.Data.Entity.EntityState.Deleted;
                 }
                 db.SaveChanges();
                 ts.Complete();
@@ -248,19 +248,19 @@ namespace HTBox.Web.Controllers
             using (TransactionScope ts = new TransactionScope())
             {
                 var menu = db.WebPagesRoles.Find(roleCode);
-                db.Entry(menu).State = System.Data.EntityState.Deleted;
+                db.Entry(menu).State = System.Data.Entity.EntityState.Deleted;
                 foreach (var vuser in db.Webpages_VUsers.Where(o => o.RoleID == roleCode))
                 {
                     foreach (var tree in db.MenuTreeRights.Where(o => o.VuserID == vuser.VUserId))
                     {
-                        db.Entry(tree).State = System.Data.EntityState.Deleted;
+                        db.Entry(tree).State = System.Data.Entity.EntityState.Deleted;
                     }
-                    db.Entry(vuser).State = System.Data.EntityState.Deleted;
+                    db.Entry(vuser).State = System.Data.Entity.EntityState.Deleted;
 
                 }
                 foreach (var vuser in db.WebPagesUsersInRoles.Where(o => o.RoleCode == roleCode))
                 {
-                    db.Entry(vuser).State = System.Data.EntityState.Deleted;
+                    db.Entry(vuser).State = System.Data.Entity.EntityState.Deleted;
                 }
                 db.SaveChanges();
                 ts.Complete();
