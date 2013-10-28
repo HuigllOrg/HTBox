@@ -1,0 +1,113 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Showroom | interior designers community</title>
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script src="@Url.Content("~/Scripts/jquery-2.0.3.min.js")"></script>
+    
+  
+    <link type="text/css" rel="stylesheet" media="all" href="@Url.Content("~/Content/base/system.css")">
+    <link type="text/css" rel="stylesheet" media="all" href="@Url.Content("~/Content/base/system-menus.css")">
+    <link type="text/css" rel="stylesheet" media="all" href="@Url.Content("~/Content/base/style.css")">
+    <link type="text/css" rel="stylesheet" media="all" href="@Url.Content("~/Content/base/navigation.css")">
+
+    <style type="text/css">
+
+
+    </style>
+</head>
+<body id="body">
+    <div class="min-width">
+        <div id="main">
+            <div id="header">
+                <div class="head-row1">
+                    <div class="col1">
+                        <a href="#" title="Home">
+                            <img src="@Url.Content("~/Images/base/logo.png")" alt="Home" class="logo"></a>
+                    </div>
+                    <div class="col2">
+                        <div class="bg-login">
+                            <div id="user-bar">
+                                <form action="/drupal_24548/?q=node&amp;destination=node" accept-charset="UTF-8"
+                                method="post" id="user-login-form">
+                                <div>
+                                    <div class="form-item" id="edit-name-wrapper">
+                                        <label for="edit-name">
+                                            Username: <span class="form-required" title="This field is required.">*</span></label>
+                                        <input maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required"
+                                            type="text">
+                                    </div>
+                                    <div class="form-item" id="edit-pass-wrapper">
+                                        <label for="edit-pass">
+                                            Password: <span class="form-required" title="This field is required.">*</span></label>
+                                        <input name="pass" id="edit-pass" maxlength="60" size="15" class="form-text required"
+                                            type="password">
+                                    </div>
+                                    <input name="op" id="edit-submit-2" value="login" class="form-submit" type="submit">
+                                    <div class="item-list">
+                                        <ul>
+                                            <li class="first"><a href="http://www.drame.cn/drupal_24548/?q=user/register">create
+                                                new account</a></li>
+                                            <li class="last"><a href="http://www.drame.cn/drupal_24548/?q=user/password">Lost password?</a></li>
+                                        </ul>
+                                    </div>
+                                    <input name="form_build_id" id="form-8be84842bcdedebb0d9bdd07493a884f" value="form-8be84842bcdedebb0d9bdd07493a884f"
+                                        type="hidden">
+                                    <input name="form_id" id="edit-custom-login-block" value="custom_login_block" type="hidden">
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ul id="navigation" class="nav-main">
+                        <li><a href="#">Home</a></li>
+                        <li class="list"><a href="#">Freebies</a>
+                            <ul class="nav-sub">
+                                <li><a href="#">Backgrounds</a></li>
+                                <li><a href="#">Buttons</a></li>
+                                <li><a href="#">Graphics</a></li>
+                                <li><a href="#">HTML & CSS</a></li>
+                                <li><a href="#">Icons</a></li>
+                                <li><a href="#">PSD</a></li>
+                                <li><a href="#">Templates</a></li>
+                                <li><a href="#">Tutorials</a></li>
+                            </ul>
+                        </li>
+                        <li class="list"><a href="#">About</a>
+                            <ul class="nav-sub">
+                                <li><a href="#">About PSDGraphics</a></li>
+                                <li><a href="#">Commercial Use</a></li>
+                                <li><a href="#">Terms Of Use</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+             @RenderSection("featured", required: false)
+            <section>
+                @RenderBody()
+            </section>            
+        </div>
+        <!--Footer-->
+        <div id="footer">
+            <div class="foot">
+                <span><strong>inventor</strong> © 2009 <a href="http://www.drame.cn/drupal_24548/?q=node/39">
+                    Privacy policy</a> </span>
+            </div>
+        </div>
+        <!--Coded by Leo-->
+    </div>  
+</body>
+</html>
+
+
+
+      
+      

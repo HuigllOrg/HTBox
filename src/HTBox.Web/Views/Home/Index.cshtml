@@ -1,14 +1,359 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-}
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h2>@ViewBag.Title.</h2>
-            </hgroup>
-           
-        </div>
-    </section>
+    Layout = "~/Views/Shared/_PageMaster.cshtml";
 }
 
+<style type="text/css">
+    
+</style>
+
+<div id="cont">
+    <div id="left-col">
+        <div class="ind">
+            <div class="block block-search" id="block-search-0">
+                <div class="block-bot">
+                    <div class="block-top">
+                        <div class="title">
+                            <h3>
+                                Search</h3>
+                        </div>
+                        <div class="content">
+                            <form action="/drupal_24548/" accept-charset="UTF-8" method="post" id="search-block-form">
+                            <div>
+                                <div class="container-inline">
+                                    <div class="form-item" id="edit-search-block-form-1-wrapper">
+                                        <label for="edit-search-block-form-1">
+                                            Search this site:
+                                        </label>
+                                        <input maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15"
+                                            value="" title="Enter the terms you wish to search for." class="form-text" type="text">
+                                    </div>
+                                    <input name="op" id="edit-submit" value="Search" class="form-submit" type="submit">
+                                    <input name="form_build_id" id="form-800bd39e8e8966828c7e2f348cf74297" value="form-800bd39e8e8966828c7e2f348cf74297"
+                                        type="hidden">
+                                    <input name="form_id" id="edit-search-block-form" value="search_block_form" type="hidden">
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block block-user" id="block-user-1">
+                <div class="block-bot">
+                    <div class="block-top">
+                        <div class="title">
+                            <h3>
+                                Navigation</h3>
+                        </div>
+                        <div class="content">
+                            <ul class="menu">
+                                <li class="leaf first"><a href="http://www.drame.cn/drupal_24548/?q=node" title=""
+                                    class="active">Management Consulting</a></li>
+                                <li class="leaf"><a href="http://www.drame.cn/drupal_24548/?q=node/8" title="">Policy
+                                    &amp; Regulatory Analysis</a></li>
+                                <li class="leaf"><a href="http://www.drame.cn/drupal_24548/?q=node" title="" class="active">
+                                    Market Assessment</a></li>
+                                <li class="leaf"><a href="http://www.drame.cn/drupal_24548/?q=node/8" title="">Regulatory
+                                    Support</a></li>
+                                <li class="leaf"><a href="http://www.drame.cn/drupal_24548/?q=node/8" title="">Scientific
+                                    &amp; Risk Assessment</a></li>
+                                <li class="leaf last"><a href="http://www.drame.cn/drupal_24548/?q=node/8" title="">
+                                    Change Management</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block block-blog" id="block-blog-0">
+                <div class="block-bot">
+                    <div class="block-top">
+                        <div class="title">
+                            <h3>
+                                Recent blog posts</h3>
+                        </div>
+                        <div class="content">
+                            <div class="item-list">
+                                <ul>
+                                    <li class="first"><a href="http://www.drame.cn/drupal_24548/?q=node/43">News</a></li>
+                                    <li><a href="http://www.drame.cn/drupal_24548/?q=node/41">Solutions</a></li>
+                                    <li><a href="http://www.drame.cn/drupal_24548/?q=node/40">About Us</a></li>
+                                    <li><a href="http://www.drame.cn/drupal_24548/?q=node/39">Privacy policy</a></li>
+                                    <li><a href="http://www.drame.cn/drupal_24548/?q=node/3">Lorem ipsum dolor sit amet,
+                                        consectuer</a></li>
+                                    <li><a href="http://www.drame.cn/drupal_24548/?q=node/2">Company services</a></li>
+                                    <li><a href="http://www.drame.cn/drupal_24548/?q=node/9">Blog</a></li>
+                                    <li class="last"><a href="http://www.drame.cn/drupal_24548/?q=node/8">Consectuer adipiscing
+                                        elit. Praesent</a></li>
+                                </ul>
+                            </div>
+                            <div class="more-link">
+                                <a href="http://www.drame.cn/drupal_24548/?q=blog" title="Read the latest blog entries.">
+                                    more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block block-user" id="block-user-3">
+                <div class="block-bot">
+                    <div class="block-top">
+                        <div class="title">
+                            <h3>
+                                Who's online</h3>
+                        </div>
+                        <div class="content">
+                            There are currently <em>0 users</em> and <em>0 guests</em> online.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="block block-block" id="block-block-10">
+                <div class="block-bot">
+                    <div class="block-top">
+                        <div class="title">
+                            <h3>
+                            </h3>
+                        </div>
+                        <div class="content">
+                            <a href="#">
+                                <img alt="" src="@Url.Content("~/Images/base/banner.jpg")"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cont-col">
+        <div class="ind">
+            <div id="zSlider">
+                <div id="picshow">
+                    <div id="picshow_img">
+                        <ul>
+                            <li style="display: none;"><a href="http://www.5icool.org/" target="_blank">
+                                <img src="/Images/base/1.jpg"></a></li>
+                            <li style="display: list-item;"><a href="http://www.5icool.org/" target="_blank">
+                                <img src="/Images/base/2.jpg"></a></li>
+                            <li style="display: none;"><a href="http://www.5icool.org/" target="_blank">
+                                <img src="/Images/base/3.jpg"></a></li>
+                            <li style="display: none;"><a href="http://www.5icool.org/" target="_blank">
+                                <img src="/Images/base/4.jpg"></a></li>
+                            <li style="display: none;"><a href="http://www.5icool.org/" target="_blank">
+                                <img src="/Images/base/5.jpg"></a></li>
+                        </ul>
+                    </div>
+                    <div id="picshow_tx">
+                        <ul>
+                            <li style="display: none;">
+                                <h3>
+                                    <a href="http://www.5icool.org/" target="_blank">中国死飞店铺推介：上海死飞店FACTORY FIVE</a></h3>
+                                <p>
+                                    上海第一家死飞精品店，由三个外国人与一中国人联合创办，主要经营客订个性单速车，帮助他们得到自己梦想中的车架。</p>
+                            </li>
+                            <li style="display: block; overflow: hidden; height: 62.760347926961316px; margin-top: 0px;
+                                margin-bottom: 0px; padding-top: 8.950775061878453px; padding-bottom: 8.950775061878453px;">
+                                <h3>
+                                    <a href="http://www.5icool.org/" target="_blank">骑看世界：纯美的世界恬静的心冰岛骑游之旅</a></h3>
+                                <p>
+                                    冰岛有“火山岛”、“雾岛”、“冰封的土地”、“冰与火之岛”之称。有想过在这里骑游吗？下面看看Ovegur的冰岛骑游之旅吧。</p>
+                            </li>
+                            <li style="display: none;">
+                                <h3>
+                                    <a href="http://www.5icool.org/" target="_blank">空气糟糕透了！酷站代码推荐几款实用的骑行防毒口罩</a></h3>
+                                <p>
+                                    这几天，全国各地的空气糟糕透顶！北京空气污染指数又爆表了！！！经过资深车友的推荐及亲身体验，整理出几款超强防毒的骑行口罩。</p>
+                            </li>
+                            <li style="display: none;">
+                                <h3>
+                                    <a href="http://www.5icool.org/" target="_blank">[组图]1200万像素带Wi-Fi 骑行记录仪Gopro Hero3评测</a></h3>
+                                <p>
+                                    近年来户外骑行等运动录像盛行，Gopro这品牌可说功不可没，新版的Gopro Hero3具有1200万像素带Wi-Fi功能……</p>
+                            </li>
+                            <li style="display: none;">
+                                <h3>
+                                    <a href="http://www.5icool.org/" target="_blank">张向东：南非无危险的骑行与有纠结的ubuntu(组图)</a></h3>
+                                <p>
+                                    “我要从南骑到北，我还要从白骑到黑。我要人们都看到我，却不知道我是谁。爱上我你就不要后悔，总有一天我要远走高飞。”</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="select_btn">
+                    <ul>
+                        <li class="" style="border: none;"><a href="http://www.5icool.org/" target="_blank">
+                            <span class="select_text">上海死飞店FACTORY FIVE</span></a></li>
+                        <li class="current"><a href="http://www.5icool.org/" target="_blank"><span class="select_text">
+                            骑看世界：北欧冰岛骑游之旅</span></a></li>
+                        <li class=""><a href="http://www.5icool.org/" target="_blank"><span class="select_text">
+                            推荐几款实用的骑行防毒口罩</span></a></li>
+                        <li class=""><a href="http://www.5icool.org/" target="_blank"><span class="select_text">
+                            骑行记录仪Gopro Hero3评测</span></a></li>
+                        <li class=""><a href="http://www.5icool.org/" target="_blank"><span class="select_text">
+                            3G门户总裁张向东南非骑行日记</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-left">
+                <div class="border-right">
+                    <div class="border-bot">
+                        <div class="border-top">
+                            <div class="corner-bot-left">
+                                <div class="corner-bot-right">
+                                    <div class="corner-top-left">
+                                        <div class="corner-top-right">
+                                            <div class="inner">
+                                                <!-- start main content -->
+                                                <div class="node">
+                                                    <div style="overflow: hidden; width: 100%;">
+                                                        <div class="corner-top-left2">
+                                                            <div class="corner-top-right2">
+                                                                <div class="corner-bot-left2">
+                                                                    <div class="corner-bot-right2">
+                                                                        <h1 class="title">
+                                                                            <a href="http://www.drame.cn/drupal_24548/?q=node/3">Lorem ipsum dolor sit amet, consectuer</a></h1>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="submit">
+                                                            <span class="submitted">Submitted by admin on Wed, 04/29/2009 - 11:52</span></div>
+                                                    </div>
+                                                    <div class="taxonomy">
+                                                    </div>
+                                                    <div class="content">
+                                                        <img alt="" src="@Url.Content("~/Images/base/1-p1.jpg")" class="alignleft">
+                                                        Aliquam erat volutpat. Duis ac nteger rut ante eu lacus. Quisque nulla. Lorem ipsum
+                                                        dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus.
+                                                        Aenean nonummy hen drerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum
+                                                        sociis natoque penatibus et magnis dis parturient
+                                                        <br>
+                                                        <br>
+                                                        Aliquam erat volutpat. <a href="#">Duis ac nteger rut</a> ante eu lacus. Quisque
+                                                        nulla. Lorem ipsum dolor sit amet, consectetuer
+                                                        <div class="clear">
+                                                        </div>
+                                                    </div>
+                                                    <div class="links-indent">
+                                                        <div class="links">
+                                                            <ul class="links inline">
+                                                                <li class="blog_usernames_blog first"><a href="http://www.drame.cn/drupal_24548/?q=blog/1"
+                                                                    title="Read admin's latest blog entries.">admin's blog</a></li>
+                                                                <li class="comment_comments"><a href="http://www.drame.cn/drupal_24548/?q=node/3#comments"
+                                                                    title="Jump to the first comment of this posting.">2 comments</a></li>
+                                                                <li class="node_read_more last"><a href="http://www.drame.cn/drupal_24548/?q=node/3"
+                                                                    title="Read the rest of Lorem ipsum dolor sit amet, consectuer.">Read more</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="node">
+                                                    <div style="overflow: hidden; width: 100%;">
+                                                        <div class="corner-top-left2">
+                                                            <div class="corner-top-right2">
+                                                                <div class="corner-bot-left2">
+                                                                    <div class="corner-bot-right2">
+                                                                        <h1 class="title">
+                                                                            <a href="http://www.drame.cn/drupal_24548/?q=node/8">Consectuer adipiscing elit. Praesent</a></h1>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="submit">
+                                                            <span class="submitted">Submitted by admin on Fri, 04/11/2008 - 15:52</span></div>
+                                                    </div>
+                                                    <div class="taxonomy">
+                                                    </div>
+                                                    <div class="content">
+                                                        <img alt="" src="@Url.Content("~/Images/base/1-p2.jpg")" class="alignleft">
+                                                        Aliquam erat volutpat. Duis ac nteger rut ante eu lacus. Quisque nulla. Lorem ipsum
+                                                        dolor sit amet, consectetuer adipiscing elit.
+                                                        <br>
+                                                        <br>
+                                                        <ul style="float: left; line-height: 38px;">
+                                                            <li><a href="#">Aliquam erat volutpatuis ac nteger ru</a></li>
+                                                            <li><a href="#">Ante eu lacus. Quisque nulla lorem</a></li>
+                                                            <li><a href="#">Ipsum dolor sit amet</a></li>
+                                                            <li><a href="#">Consectetuer adipiscing elit</a></li>
+                                                        </ul>
+                                                        <div class="clear">
+                                                        </div>
+                                                    </div>
+                                                    <div class="links-indent">
+                                                        <div class="links">
+                                                            <ul class="links inline">
+                                                                <li class="blog_usernames_blog first"><a href="http://www.drame.cn/drupal_24548/?q=blog/1"
+                                                                    title="Read admin's latest blog entries.">admin's blog</a></li>
+                                                                <li class="node_read_more last"><a href="http://www.drame.cn/drupal_24548/?q=node/8"
+                                                                    title="Read the rest of Consectuer adipiscing elit. Praesent.">Read more</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link type="text/css" rel="stylesheet" media="all" href="@Url.Content("~/Content/base/picSlider.css")">
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        PageLoadPicSlider();
+
+    })
+
+    function PageLoadPicSlider() {
+        $('#select_btn li:first').css('border', 'none');
+        if ($('#zSlider').length) {
+            zSlider();
+            $('#h_sns').find('img').hover(function () {
+                $(this).fadeTo(200, 0.5);
+            }, function () {
+                $(this).fadeTo(100, 1);
+            });
+        }
+
+        function zSlider(ID, delay) {
+            var ID = ID ? ID : '#zSlider';
+            var delay = delay ? delay : 5000;
+            var currentEQ = 0, picnum = $('#picshow_img li').size(), autoScrollFUN;
+            $('#select_btn li').eq(currentEQ).addClass('current');
+            $('#picshow_img li').eq(currentEQ).show();
+            $('#picshow_tx li').eq(currentEQ).show();
+            autoScrollFUN = setTimeout(autoScroll, delay);
+            function autoScroll() {
+                clearTimeout(autoScrollFUN);
+                currentEQ++;
+                if (currentEQ > picnum - 1) currentEQ = 0;
+                $('#select_btn li').removeClass('current');
+                $('#picshow_img li').hide();
+                $('#picshow_tx li').hide().eq(currentEQ).slideDown(400);
+                $('#select_btn li').eq(currentEQ).addClass('current');
+                $('#picshow_img li').eq(currentEQ).show();
+                autoScrollFUN = setTimeout(autoScroll, delay);
+            }
+            $('#picshow').hover(function () {
+                clearTimeout(autoScrollFUN);
+            }, function () {
+                autoScrollFUN = setTimeout(autoScroll, delay);
+            });
+            $('#select_btn li').hover(function () {
+                var picEQ = $('#select_btn li').index($(this));
+                if (picEQ == currentEQ) return false;
+                currentEQ = picEQ;
+                $('#select_btn li').removeClass('current');
+                $('#picshow_img li').hide();
+                $('#picshow_tx li').hide().eq(currentEQ).slideDown(100);
+                $('#select_btn li').eq(currentEQ).addClass('current');
+                $('#picshow_img li').eq(currentEQ).show();
+                return false;
+            });
+        };
+    }
+</script>
