@@ -13,6 +13,7 @@ namespace HTBox.Web.Models
 {
     public class ZTree
     {
+        
         [JsonProperty("id")]
         public string ID { get; set; }
         [JsonProperty("name")]
@@ -41,7 +42,7 @@ namespace HTBox.Web.Models
 
         public ZTree(Webpages_UserProfile user)
         {
-            ID = user.UserId.ToString();
+            ID ="U"+ user.UserId.ToString();
             Name = user.UserName;
             NodeType = "User";
             ICON = "Content/zTreeStyle/img/user.gif";

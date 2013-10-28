@@ -64,7 +64,7 @@
     function onRemove(e, treeId, treeNode) {
         var url;
         if (treeNode.nodeType == "User")
-            url = '@Url.Action("DeleteUser", "UserRole")?userid=' + treeNode.id;
+            url = '@Url.Action("DeleteUser", "UserRole")?userid=' + treeNode.id.substr(1);//skip U
         else
             url = '@Url.Action("DeleteRole", "UserRole")?roleCode=' + treeNode.id;
         $.get(url, function (data) {
@@ -89,7 +89,7 @@
         clickedNode = node;
         var url;
         if (node.nodeType == "User")
-            url = '@Url.Action("EditUser", "UserRole")?userid=' + node.id;
+            url = '@Url.Action("EditUser", "UserRole")?userid=' + node.id.substr(1);
         else
             url = '@Url.Action("EditRole", "UserRole")?roleCode=' + node.id;
         var dialogDiv = $('#updateDialog');
